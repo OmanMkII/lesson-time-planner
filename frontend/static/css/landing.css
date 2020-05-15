@@ -1,0 +1,20 @@
+/* Layout css, merge if not needed */
+
+.page-header {
+    grid-area: header;
+}
+
+.description {
+    grid-area: body-left;
+}
+
+.todo {
+      grid-area: body-right;
+}
+
+/* TODO: make a grid that works (aka learn lol) */
+/* .grid-container {
+  display: grid;
+  background: "gray";
+  padding: 10px;
+} */

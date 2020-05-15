@@ -1,0 +1,13 @@
+/*
+(CSS) TODO list:
+
+ - Proper formatting of texts
+ - Proper formatting of headers
+ - Center everything
+ - Probaly make a nice grid format with |  |<Content>|  |
+ - Set up for mobile
+*/
+
+p, h1 {
+    /* color: blue; */
+}
