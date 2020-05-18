@@ -24,20 +24,20 @@ CREATE TABLE IF NOT EXISTS StaffSubjects (
 
 CREATE TABLE IF NOT EXISTS Lessons (
   Day varchar(10) NOT NULL,
-  Time time NOT NULL,
+  StartTime time NOT NULL,
   Subject varchar(50),
 
-  ADD CONSTRAINT PK_Lesson_Time PRIMARY KEY (Day, Time)
+  ADD CONSTRAINT PK_Lesson_Time PRIMARY KEY (Day, StartTime)
 );
 
 CREATE TABLE IF NOT EXISTS LessonStaff (
   Day varchar(10) NOT NULL,
-  Time time NOT NULL,
+  StartTime time NOT NULL,
   Name varchar(255) NOT NULL,
 
-  ADD CONSTRAINT PK_Lesson_Staff PRIMARY KEY (Day, Time, Staff),
+  ADD CONSTRAINT PK_Lesson_Staff PRIMARY KEY (Day, StartTime, Staff),
 
   ADD CONSTRAINT FOREIGN KEY(Day) REFERENCES Lessons(Day),
-  ADD CONSTRAINT FOREIGN KEY(Time) REFERENCES Lessons(Time),
+  ADD CONSTRAINT FOREIGN KEY(StartTime) REFERENCES Lessons(StartTime),
   ADD CONSTRAINT FOREIGN KEY(Name) REFERENCES Staff(Name)
 );
